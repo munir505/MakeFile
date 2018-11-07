@@ -1,4 +1,4 @@
-.PHONY = makefiles delete_txt write_to var_message git_hash home_dir check_value var_def check_var
+.PHONY = makefiles delete_txt write_to var_message git_hash home_dir check_value var_def check_var origin_check
 
 MESSAGE = Hello World
 ENV_VAR = $(shell env | grep TEST)
@@ -63,3 +63,6 @@ ifdef COM_VAR
 else
 	@echo "Not Command Line Variable"
 endif
+
+origin_check:
+	@echo $(origin TEST)
